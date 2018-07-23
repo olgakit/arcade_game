@@ -1,3 +1,95 @@
 body {
     text-align: center;
 }
+
+/*
+* Modal
+*/
+.modal1,
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#win {
+    background-color: #fefefe;
+    margin: auto;
+    margin-top: 20%;
+    padding: 5px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+#bye {
+    width: 500px;
+    align-items: center !important;
+    margin-top: 10% !important;
+    margin: auto;
+}
+
+
+/*
+ * Responsive
+ */
+
+@viewport {
+    zoom: 1.0;
+}
+
+@media screen and (max-width: 320px) and (min-width: 320px) {
+
+    .modal1,
+    .modal2 {
+        min-width: 320px !important;
+        align-items: center;
+    }
+
+    #win {
+        width: 80% !important;
+        margin-top: 20%;
+    }
+    #bye {
+        width: 320px !important;
+        float: none !important;
+        align-items: center !important;
+        margin-top: 20% !important;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .modal1,
+    .modal2 {
+        align-items: center;
+    }
+    #win {
+        width: 80% !important;
+        margin-top: 5% !important;
+    }
+    #bye {
+        width: 320px !important;
+        float: none !important;
+        align-items: center !important;
+        margin-top: 20% !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #win {
+        width: 50%;
+    }
+    #bye {
+        width: 90%;
+        align-items: center !important;
+        margin-top: 10% !important;
+    }
+}
