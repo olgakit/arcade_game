@@ -18,8 +18,9 @@ class Creatures {
 //if enemy and player collide, restart the game through checkCollisions() func in engine.js
     checkCollisions(anyCharacter) {
         if(this.y===anyCharacter.y) {
-            if(this.x >= anyCharacter.x-0.49 && this.x <= anyCharacter.x+0.49) {
+            if(this.x >= anyCharacter.x-0.75 && this.x <= anyCharacter.x+0.75) {
                 return true;
+                // alert('stop');
             }
         }
         else {
@@ -44,7 +45,7 @@ class Player extends Creatures {
         super.update();
         if(this.boundaryY && !this.moving && !this.victory) {
             this.victory = true;
-            modal1.style.display = "block";
+            modal1.style.display = 'block';
         }
     }
 
@@ -100,12 +101,11 @@ class Enemy extends Creatures {
 // Place the player object in a variable called player
 const player = new Player();
 // Place all enemy objects in an array called allEnemies
-const bug1 = new Enemy(-1,1,10);
-const bug2 = new Enemy(-1,2,12);
-const bug3 = new Enemy(-3,3,16);
-const bug4 = new Enemy(-3,2,12);
-const allEnemies = [];
-allEnemies.push(bug1, bug2, bug3, bug4);
+const allEnemies = [
+    new Enemy(-1,1,7),
+    new Enemy(-1,2,10),
+    new Enemy(-3,3,16)
+];
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {

@@ -6,7 +6,7 @@
  * A game engine works by drawing the entire game screen over and over, kind of
  * like a flipbook you may have created as a kid. When your player moves across
  * the screen, it may look like just that image/character is moving or being
- * drawn but that is not the case. What's really happening is the entire "scene"
+ * drawn but that is not the case. What's really happening is the entire 'scene'
  * is being drawn over and over, presenting the illusion of animation.
  *
  * This engine makes the canvas' context (ctx) object globally available to make
@@ -18,7 +18,7 @@ const modal2 = document.querySelector('.modal2');
 var Engine = (function(global) {
     //display initial modal once the window is open
     $(window).on('load', function(e){
-        alert("Use Up-Down-Right-Left arrows on the keybord to move the player up to the water avoiding collisions with the enemy-bugs.")
+        alert('Use Up-Down-Right-Left arrows on the keybord to move the player up to the water avoiding collisions with the enemy-bugs.')
     });
 
 
@@ -39,20 +39,20 @@ var Engine = (function(global) {
     const replay = document.getElementById('replay');
 
     yes.addEventListener('click', function() {
-        modal1.style.display = "none";
+        modal1.style.display = 'none';
         reset();
         player.victory = false;
         win.requestAnimationFrame(main);
     });
 
     no.addEventListener('click', function() {
-        modal1.style.display = "none";
-        modal2.style.display = "block";
+        modal1.style.display = 'none';
+        modal2.style.display = 'block';
     });
 
     replay.addEventListener('click', function() {
-        modal1.style.display = "none";
-        modal2.style.display = "none";
+        modal1.style.display = 'none';
+        modal2.style.display = 'none';
         reset();
         player.victory = false;
         win.requestAnimationFrame(main);
@@ -144,7 +144,7 @@ var Engine = (function(global) {
         player.update();
     }
 
-    /* This function initially draws the "game level", it will then call
+    /* This function initially draws the 'game level', it will then call
      * the renderEntities function. Remember, this function is called every
      * game tick (or loop of the game engine) because that's how games work -
      * they are flipbooks creating the illusion of animation but in reality
@@ -172,7 +172,7 @@ var Engine = (function(global) {
 
         /* Loop through the number of rows and columns we've defined above
          * and, using the rowImages array, draw the correct image for that
-         * portion of the "grid"
+         * portion of the 'grid'
          */
         for (row = 0; row < numRows; row++) {
             for (col = 0; col < numCols; col++) {
