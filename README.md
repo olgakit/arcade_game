@@ -3,7 +3,7 @@ frontend-nanodegree-arcade-game
 
 # Arcade Game Project
 
-![image](https://raw.githubusercontent.com/olgakit/frontend-nanodegree-arcade-game/master/path/to/img.png)
+![image](https://raw.githubusercontent.com/olgakit/arcade-game/master/path/to/img.png)
 
 ## Table of Contents
 
